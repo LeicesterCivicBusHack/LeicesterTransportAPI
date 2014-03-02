@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "aadc8efb80017d67740901b694228fc4",
+    "hash": "bb8f531d4ee48ea8f0635c019691ea92",
     "packages": [
         {
             "name": "craue/geo-bundle",
