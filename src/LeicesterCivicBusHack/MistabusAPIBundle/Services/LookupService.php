@@ -20,7 +20,7 @@
 		 * @param $radius
 		 * @return ArrayCollection|\LeicesterCivicBusHack\MistabusAPIBundle\Entity\Location[]
 		 */
-		public function nearestStops($latitude, $longitude, $radius = 0.5) {
+		public function nearestStops($latitude, $longitude, $radius = 5) {
 
 			#convert radius from km into degrees (approx)
 			$radius = $radius / 111;
@@ -32,8 +32,8 @@
 				SQRT((:lng - l.longitude) * (:lng - l.longitude)) +	SQRT((:lat - l.latitude) * (:lat - l.latitude))
 			) <= :radius
 
+
 			')
-			->setMaxResults(10)
 			->setParameters([
 					'lng'=>$longitude,
 			        'lat'=>$latitude,
