@@ -9,7 +9,7 @@
 	<script>
 		function initialize() {
 			var mapOptions = {
-				zoom: 11,
+				zoom: 12,
 				center: new google.maps.LatLng(52.653684,-1.132847)
 			};
 
@@ -24,7 +24,7 @@
 					{% endfor %}
 				],
 				dissipating:true,
-				radius: 50
+				radius: 25
 			});
 			heatmap.setMap(map);
 			{% endspaceless %}

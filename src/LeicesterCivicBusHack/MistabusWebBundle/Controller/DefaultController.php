@@ -13,7 +13,7 @@
 		 */
 		public function indexAction() {
 
-			$delays = $this->getDoctrine()->getRepository('LeicesterCivicBusHackMistabusAPIBundle:Delay')->findAll();
+			$delays = $this->getDoctrine()->getRepository('LeicesterCivicBusHackMistabusAPIBundle:Delay')->findBy(['endtime'=>null]);
 
 
 
