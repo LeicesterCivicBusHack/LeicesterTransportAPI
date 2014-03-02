@@ -54,6 +54,15 @@ class Delay implements \JsonSerializable
 		$this->updatetime = new \DateTime();
 	}
 
+	public function getLatitude() {
+		return $this->getLocation()->getLatitude();
+	}
+
+	public function getLongitude() {
+		return $this->getLocation()->getLongitude();
+
+	}
+
 	public function jsonSerialize() {
 		return([
 			'id'=>$this->id,

@@ -12,6 +12,11 @@
 		 * @return Response
 		 */
 		public function indexAction() {
-			return $this->render('LeicesterCivicBusHackMistabusWebBundle:Default:index.html.twig');
+
+			$delays = $this->getDoctrine()->getRepository('LeicesterCivicBusHackMistabusAPIBundle:Delay')->findAll();
+
+
+
+			return $this->render('LeicesterCivicBusHackMistabusWebBundle:Default:index.html.twig',['delays'=>$delays]);
 		}
 	}
