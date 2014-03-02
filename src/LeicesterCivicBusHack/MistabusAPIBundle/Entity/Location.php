@@ -57,6 +57,8 @@ class Location implements \JsonSerializable
     private $locality;
 
 
+	private $distance;
+
 	/**
 	 * @todo calculate distance so results can be ordered on client device
 	 * @return array|mixed
@@ -68,12 +70,16 @@ class Location implements \JsonSerializable
 			'locality'=>$this->locality,
 			'latitude'=>$this->latitude,
 			'longitude'=>$this->longitude,
-			'distance'=>0
+			'distance'=>$this->distance
 		];
 	}
 
 	public function getDistance() {
+		return $this->distance;
+	}
 
+	public function setDistance($distance) {
+		$this->distance = $distance;
 	}
 
     /**

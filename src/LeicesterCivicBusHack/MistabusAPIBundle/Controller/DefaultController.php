@@ -28,7 +28,13 @@
 				return new Response(null, 404, array('Content-Type'=>'application/json'));
 			}
 
-			return new Response(json_encode($locations), 200, array('Content-Type'=>'application/json'));
+			$output = array();
+			foreach($locations as $location) {
+				$location[0]->setDistance($location['distance']);
+				$output[] = $location[0];
+			}
+
+			return new Response(json_encode($output), 200, array('Content-Type'=>'application/json'));
 		}
 
 		/**
