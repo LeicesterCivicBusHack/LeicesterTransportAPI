@@ -1,0 +1,7 @@
+parameters:
+#    leicester_civic_bus_hack_mistabus_web.example.class: LeicesterCivicBusHack\MistabusWebBundle\Example
+
+services:
+#    leicester_civic_bus_hack_mistabus_web.example:
+#        class: %leicester_civic_bus_hack_mistabus_web.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

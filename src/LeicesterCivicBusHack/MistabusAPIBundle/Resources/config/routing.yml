@@ -1,0 +1,15 @@
+leicester_civic_bus_hack_mistabus_api_location:
+    pattern:  /location.json
+    defaults: { _controller: LeicesterCivicBusHackMistabusAPIBundle:Default:nearestStops }
+
+leicester_civic_bus_hack_mistabus_api_routes:
+    pattern:  /route.json
+    defaults: { _controller: LeicesterCivicBusHackMistabusAPIBundle:Default:availableRoutes }
+
+leicester_civic_bus_hack_mistabus_api_postdelay:
+    pattern:  /postdelay.json
+    defaults: { _controller: LeicesterCivicBusHackMistabusAPIBundle:Default:postDelay }
+
+leicester_civic_bus_hack_mistabus_api_updatedelay:
+    pattern:  /updatedelay.json
+    defaults: { _controller: LeicesterCivicBusHackMistabusAPIBundle:Default:updateDelay }

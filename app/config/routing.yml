@@ -1,0 +1,7 @@
+leicester_civic_bus_hack_mistabus_web:
+    resource: "@LeicesterCivicBusHackMistabusWebBundle/Resources/config/routing.yml"
+    prefix:   /
+
+leicester_civic_bus_hack_mistabus_api:
+    resource: "@LeicesterCivicBusHackMistabusAPIBundle/Resources/config/routing.yml"
+    prefix:   /api/0.1

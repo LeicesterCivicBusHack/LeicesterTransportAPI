@@ -1,0 +1,3 @@
+leicester_civic_bus_hack_api_report:
+    pattern:  /report
+    defaults: { _controller: LeicesterCivicBusHackAPIBundle:Default:report }

@@ -1,0 +1,3 @@
+leicester_civic_bus_hack_mistabus_web_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: LeicesterCivicBusHackMistabusWebBundle:Default:index }
