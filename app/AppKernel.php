@@ -16,6 +16,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+					  new Craue\GeoBundle\CraueGeoBundle(),
             new LeicesterCivicBusHack\MistabusAPIBundle\LeicesterCivicBusHackMistabusAPIBundle(),
             new LeicesterCivicBusHack\MistabusWebBundle\LeicesterCivicBusHackMistabusWebBundle(),
         );

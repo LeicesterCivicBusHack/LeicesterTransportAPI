@@ -25,20 +25,34 @@
 			#convert radius from km into degrees (approx)
 			$radius = $radius / 111;
 
+			$sql = <<<QUERY
+SELECT l, GEO_DISTANCE(l.latitude, l.longitude, :lat, :lng) as distance
+FROM LeicesterCivicBusHackMistabusAPIBundle:Location l
+ORDER BY distance ASC
+QUERY;
+
 			$locations = $this->em
-			->createQuery('
-			SELECT l from LeicesterCivicBusHackMistabusAPIBundle:Location l WHERE (
-				SQRT((:lng - l.longitude) * (:lng - l.longitude)) +	SQRT((:lat - l.latitude) * (:lat - l.latitude))
-			) <= :radius
-
-
-			')
-			->setParameters([
-					'lng'=>$longitude,
-			        'lat'=>$latitude,
-			        'radius'=>$radius
-			                ])
+				->createQuery($sql)
+				->setParameters([
+					'lng'=> $longitude,
+					'lat'=> $latitude,
+					//'radius'=> $radius
+				])
+				->setMaxResults(5)
 				->execute();
+//
+//			$locations = $this->em
+//			->createQuery('
+//			SELECT l from LeicesterCivicBusHackMistabusAPIBundle:Location l WHERE (
+//				SQRT((:lng - l.longitude) * (:lng - l.longitude)) +	SQRT((:lat - l.latitude) * (:lat - l.latitude))
+//			) <= :radius
+//			')
+//			->setParameters([
+//					'lng'=>$longitude,
+//			        'lat'=>$latitude,
+//			        'radius'=>$radius
+//			                ])
+//				->execute();
 			return $locations;
 		}
 
