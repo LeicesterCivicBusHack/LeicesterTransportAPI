@@ -1,40 +1,85 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{% block title %}{% endblock %}</title>
+	<title>Mista Bus</title>
 	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<link rel="icon" type="image/png" href="{{ asset('img/favicon2.png') }}"/>
+
+
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+
+
 
 	{% javascripts '@LeicesterCivicBusHackMistabusWebBundle/Resources/public/js/*' %}
 	<script type="text/javascript" src="{{ asset_url }}"></script>
 	{% endjavascripts %}
 
 	{% stylesheets '@LeicesterCivicBusHackMistabusWebBundle/Resources/public/css/*' %}
-	<link rel="stylesheet" href="{{ asset_url }}" />
+	<link rel="stylesheet" href="{{ asset_url }}"/>
 	{% endstylesheets %}
 
 	{% block head_bottom %}{% endblock %}
 
 </head>
 <body>
-<!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
+<div class="outerNav">
+	<div class="innerNav">
+		<h1 class="topLogo">Mista Bus</h1>
+		<ul>
+			<li><a href="">Home</a></li>
+			<li><a href="">About</a></li>
+			<li><a href="">Contact</a></li>
+		</ul>
+	</div>
+</div>
 
-<!-- Add your site or application content here -->
+<div class="mainWrapper">
+	<div class="featureSection">
+		<div class="featSecCenter">
+			<div class="featSecText">
+				<h2>Sick of buses being late? There's an app for that!</h2>
+				<br/>
+
+				<p>Introducing Mista Bus, the app that let's you complain about it.</p>
+				<br/>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo ultrices velit, in sollicitudin risus vehicula ac. Nunc nisi massa, ultricies vitae lacus interdum,
+					gravida interdum velit. Pellentesque ultricies lobortis tellus, quis cursus ante suscipit id. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+				<br/>
+
+				<p>Etiam eros odio, fermentum in semper vitae, vulputate lacinia dolor. Proin lobortis arcu felis, eget dapibus leo varius id. Vestibulum aliquet turpis imperdiet nunc
+					suscipit, in malesuada odio commodo. Morbi ullamcorper orci erat, quis aliquet odio bibendum molestie. </p>
+
+				<img class="appstore" src="{{ asset('img/applestore.png') }}" width="250.5" height="75" alt="Apple App Store"/>
+				<img class="playstore" src="{{ asset('img/googlestore.png') }}" width="219" height="72" alt="Google Play Store"/>
+			</div>
+			<div class="iphoneBox"><img src="{{ asset('img/iphone2.png') }}" width="237.5" height="500" alt=""/></div>
+		</div>
+	</div>
+	<div class="featSecOverlay"></div>
+
+	<div class="ctaSection">
+		<p class="ctaText">Nulla est odio, auctor sed porta id, tempus a lorem. Integer iaculis at dolor a rhoncus quisque.<a href="">How it Works</a></p>
+	</div>
+
+</div>
+
 {% block content %}{% endblock %}
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+
+<div class="outerFooter ">
+	<div class="innerFooter">
+		<p class="floatleft">&copy; 2014 MistaBus&trade;. All rights reserved.</p>
+
+		<p class="floatright">Made with &#9829; at Dock, Leicester.</p>
+	</div>
+</div>
 
 </body>
 </html>

@@ -1,0 +1,109 @@
+/*1. RESET*/
+html, body, div, span, p, blockquote, pre, a, font, img, ul, li
+{
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+font-size: 100%;
+vertical-align: baseline;
+background: transparent;
+}
+body 
+{
+line-height: 1;
+font-family: 'Ubuntu', Arial, sans-serif;
+}
+ol, ul 
+{
+list-style: none;
+}
+:focus 
+{
+outline: 0;
+}
+/*End of Reset*/
+
+/*2. SubReset*/
+h1
+{
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+}
+/*End of SubReset*/
+
+/*Start of NAV*/
+.outerNav{background: #fff;border-bottom: 2px solid #ccc;}
+.topLogo{padding-top: 20px;float: left;font-family: Ubuntu, Arial;}
+.innerNav{color: #ccc;width: 1000px;height: 75px;margin: 0 auto;}
+.innerNav ul{float: right;padding-top: 30px;}
+.innerNav ul li{float: left;}
+.innerNav ul li a{color: #757575;text-decoration: none;padding: 0 0 0 50px;font-weight: bold;text-transform: uppercase;font-size: 0.8em;}
+.innerNav ul li a:hover{color: #007aff;}
+
+/*Feature Section*/
+.featureSection{background: url('img/back4.png') no-repeat center center;background-size: cover;height: 650px;z-index: 10;}
+.featSecOverlay{background: rgba(0, 122, 255, 0.9);height: 650px;margin-top: -650px;}
+.featSecCenter{width: 1000px;margin: 0 auto;padding-top: 75px;}
+
+.featSecText{width: 600px;float: left;color: #fff;padding: 40px 25px;}
+.iphoneBox{width: 250px;float: left;padding: 0px 50px;}
+
+.appstore{float: left;padding: 60px 25px;}
+.playstore{flaot: left;padding: 59px 25px;}
+.appstore:hover{cursor: pointer;}
+.playstore:hover{cursor: pointer;}
+
+.featSecCenter a{color: #fff;background: rgba(255,255,255,0.2);border: 1px solid #fff;border-radius: 5px;text-decoration: none;padding: 10px 20px;text-transform: uppercase;}
+.featSecCenter a:hover{color: #fff;background: rgba(255,255,255,0.1);}
+
+/*cta Section*/
+.ctaSection{height:75px;background: #151515;color: #fff;}
+.ctaText{padding: 27px;width: 1000px;margin: 0 auto;text-align: center;color: #fff;}
+.ctaText a{color: #fff;background: rgba(255,255,255,0);border: 1px solid #fff;border-radius: 3px;text-decoration: none;padding:10px 20px;margin: 0px 0px 0px 10px;text-transform: uppercase;font-size: 0.8em;}
+.ctaText a:hover{color: #fff;background: rgba(255,255,255,0.1);}
+
+/*Data Section*/
+.dataSection{width: 1000px;margin: 0 auto;text-align: center;height: 100px;padding: 50px 0px;}
+
+/*Footer Section*/
+.outerFooter{height: 50px;background: #191919;color: #999;}
+.innerFooter{width: 1000px;margin: 0 auto;padding-top: 15px;}
+
+/*Contact Page*/
+.featureSection2{background: url('img/back4.png') no-repeat center center;background-size: cover;height: 100px;z-index: 10;}
+.featSecOverlay2{background: rgba(0, 122, 255, 0.9);height: 100px;margin-top: -100px;}
+.featSecCenter2{width: 1000px;margin: 0 auto;padding-top: 15px;color: #222;}
+
+/*Order Form*/
+.formcontainer{height: 355px;padding: 50px 0px;}
+
+#ajax-form {width: 1000px;margin: 0 auto;}
+label {display: block;color: #222;font-size: 0.9em;font-family: Ubuntu, Arial;padding: 0px 0px 7px;}
+input, textarea {width: 100%;}
+textarea{font-family: Ubuntu, Arial;height: 125px;!important;}
+.error {color: #007aff;display: none;}
+#ajaxsuccess {color: #007aff;display: none;width: 1000px;margin-left: auto;margin-right: auto;margin-top: 120px;font-family: Ubuntu, Arial;font-size: 1em;text-align: center;}
+.formrow{width: 986px;}
+.frowl{width: 469px;float: left;padding-right: 20px;}
+.frowr{width: 469px;float: right;padding-left: 20px;}
+.formfield{padding: 8px 5px;margin: 0px 0px 15px 0px;border: 1px solid #f1f1f1;width: 100%;background-color: #fafafa;color: #222;font-size: 0.9em;}
+.formfield:focus{border: 1px solid #007aff;}
+input:focus, textarea:focus{outline: none;}
+#err-form{float: left;margin-top: 7px;margin-left: 10px;}
+#err-timedout{float: left;margin-top: 20px;margin-left: 10px;}
+#err-state{float: left;margin-top: 20px;margin-left: 10px;}
+.formbutton{float: left;color: #007aff;padding: 7px 20px;margin: 0px 10px 0px 0px;font-weight: bold;font-size: 0.65em;border: 1px solid #007aff;border-radius: 3px;text-transform: uppercase;background: #fff;cursor: pointer;}
+.formbutton:hover{background: #007aff;color: #fafafa;}
+
+/*Common classes*/
+.floatleft{float: left;}
+.floatright{float: right;}
+.clearboth{clear: both;}
+.aligncenter{text-align: center;}
+.colorblue{color: #007aff;}
+
+.generalTitles{text-align: center;font-size: 1.3em;padding: 50px 0px 0px;color: #222;}
+.genTitlesUnder{border-top: 1px solid #222;width: 75px;margin: 10px auto 40px;}
