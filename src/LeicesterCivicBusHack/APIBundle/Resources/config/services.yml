@@ -1,7 +1,0 @@
-parameters:
-#    leicester_civic_bus_hack_api.example.class: LeicesterCivicBusHack\APIBundle\Example
-
-services:
-#    leicester_civic_bus_hack_api.example:
-#        class: %leicester_civic_bus_hack_api.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]

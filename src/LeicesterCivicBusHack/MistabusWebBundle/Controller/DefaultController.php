@@ -13,9 +13,14 @@
 		 */
 		public function indexAction() {
 
-			$delays = $this->getDoctrine()->getRepository('LeicesterCivicBusHackMistabusAPIBundle:Delay')->findBy(['endtime'=>null]);
 
-
+			$delays = $this->getDoctrine()->getManager()
+				->createQuery('
+			SELECT d,l from LeicesterCivicBusHackMistabusAPIBundle:Delay d
+			JOIN d.location l
+			WHERE d.endtime IS NULL
+			')
+				->execute();
 
 			return $this->render('LeicesterCivicBusHackMistabusWebBundle:Default:index.html.twig',['delays'=>$delays]);
 		}
