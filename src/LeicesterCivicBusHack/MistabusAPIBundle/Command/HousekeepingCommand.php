@@ -6,7 +6,7 @@
 	use Symfony\Component\Console\Input\InputInterface;
 	use Symfony\Component\Console\Output\OutputInterface;
 
-	class GenerateQueueCommand extends ContainerAwareCommand {
+	class HousekeepingCommand extends ContainerAwareCommand {
 
 		protected function configure() {
 			$this
