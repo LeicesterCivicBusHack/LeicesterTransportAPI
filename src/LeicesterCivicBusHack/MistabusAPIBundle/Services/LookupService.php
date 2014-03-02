@@ -13,17 +13,11 @@
 		}
 
 		/**
-		 * @todo Calculate "Great Circle" Distance with Doctrine - good luck
-		 *       In the meantime i'll use good old Pythagoras and assume each degree of long/lat is approx 69 miles/111 km
 		 * @param $latitude
 		 * @param $longitude
-		 * @param $radius
 		 * @return ArrayCollection|\LeicesterCivicBusHack\MistabusAPIBundle\Entity\Location[]
 		 */
-		public function nearestStops($latitude, $longitude, $radius = 5) {
-
-			#convert radius from km into degrees (approx)
-			$radius = $radius / 111;
+		public function nearestStops($latitude, $longitude) {
 
 			$sql = <<<QUERY
 SELECT l, GEO_DISTANCE(l.latitude, l.longitude, :lat, :lng) as distance
@@ -38,21 +32,8 @@ QUERY;
 					'lat'=> $latitude,
 					//'radius'=> $radius
 				])
-				->setMaxResults(5)
+				->setMaxResults(25)
 				->execute();
-//
-//			$locations = $this->em
-//			->createQuery('
-//			SELECT l from LeicesterCivicBusHackMistabusAPIBundle:Location l WHERE (
-//				SQRT((:lng - l.longitude) * (:lng - l.longitude)) +	SQRT((:lat - l.latitude) * (:lat - l.latitude))
-//			) <= :radius
-//			')
-//			->setParameters([
-//					'lng'=>$longitude,
-//			        'lat'=>$latitude,
-//			        'radius'=>$radius
-//			                ])
-//				->execute();
 			return $locations;
 		}
 
