@@ -27,8 +27,7 @@
 
 			$locations = $this->em
 			->createQuery('
-			SELECT l from LeicesterCivicBusHackMistabusAPIBundle:Location l WHERE
-			(
+			SELECT l from LeicesterCivicBusHackMistabusAPIBundle:Location l WHERE (
 				SQRT((:lng - l.longitude) * (:lng - l.longitude)) +	SQRT((:lat - l.latitude) * (:lat - l.latitude))
 			) <= :radius
 

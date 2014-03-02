@@ -72,6 +72,10 @@ class Location implements \JsonSerializable
 		];
 	}
 
+	public function getDistance() {
+
+	}
+
     /**
      * Get id
      *

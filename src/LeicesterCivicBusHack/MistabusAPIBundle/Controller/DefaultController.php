@@ -25,10 +25,10 @@
 			#get locations near these co-ordinates
 			$locations = $mistabus_lookup->nearestStops($latitude,$longitude);
 			if(!$locations) {
-				return new Response(null, 404, array('Content-Type', 'application/json'));
+				return new Response(null, 404, array('Content-Type'=>'application/json'));
 			}
 
-			return new Response(json_encode($locations), 200, array('Content-Type', 'application/json'));
+			return new Response(json_encode($locations), 200, array('Content-Type'=>'application/json'));
 		}
 
 		/**
@@ -43,16 +43,16 @@
 			#check the stop exists
 			$location = $mistabus_lookup->getStop($location_id);
 			if(!$location) {
-				return new Response(null, 404, array('Content-Type', 'application/json'));
+				return new Response(null, 404, array('Content-Type'=>'application/json'));
 			}
 
 			#get routes that serve this location
 			$routes = $mistabus_lookup->availableRoutes($location);
 			if(!$routes) {
-				return new Response(null, 404, array('Content-Type', 'application/json'));
+				return new Response(null, 404, array('Content-Type'=>'application/json'));
 			}
 
-			return new Response(json_encode($routes), 200, array('Content-Type', 'application/json'));
+			return new Response(json_encode($routes), 200, array('Content-Type'=>'application/json'));
 		}
 
 		/**
@@ -69,12 +69,12 @@
 			#double check that the report has valid location and route data
 			$location = $mistabus_lookup->getStop($location_id);
 			if(!$location) {
-				return new Response(null, 404, array('Content-Type', 'application/json'));
+				return new Response(null, 404, array('Content-Type'=>'application/json'));
 			}
 
 			#post the report
 			$delay = $mistabus_report->reportDelay($location);
-			return new Response(json_encode($delay), 200, array('Content-Type', 'application/json'));
+			return new Response(json_encode($delay), 200, array('Content-Type'=>'application/json'));
 		}
 
 		/**
@@ -91,12 +91,12 @@
 			#update the report
 			$delay = $mistabus_report->getDelay($delay_id);
 			if(!$delay) {
-				return new Response(null, 404, array('Content-Type', 'application/json'));
+				return new Response(null, 404, array('Content-Type'=>'application/json'));
 			}
 
 			#post the report
 			$delay = $mistabus_report->UpdateDelay($delay,$finished);
-			return new Response(json_encode($delay), 200, array('Content-Type', 'application/json'));
+			return new Response(json_encode($delay), 200, array('Content-Type'=>'application/json'));
 		}
 
 	}

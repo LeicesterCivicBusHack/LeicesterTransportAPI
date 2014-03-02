@@ -30,7 +30,7 @@
 			$return['id'] = $report->getId();
 
 
-			$response = new Response(json_encode($return), 200, array('Content-Type', 'application/json'));
+			$response = new Response(json_encode($return), 200, array('Content-Type'=>'application/json'));
 			return $response;
 		}
 
@@ -54,7 +54,7 @@
 
 			if(!$report) {
 				$return['status'] = 'Could not find report id';
-				$response = new Response(json_encode($return), 404, array('Content-Type', 'application/json'));
+				$response = new Response(json_encode($return), 404, array('Content-Type'=>'application/json'));
 				return $response->send();
 			}
 
@@ -63,7 +63,7 @@
 			$em->flush();
 
 			$return['status'] = 'Report updated';
-			$response = new Response(json_encode($return), 200, array('Content-Type', 'application/json'));
+			$response = new Response(json_encode($return), 200, array('Content-Type'=>'application/json'));
 			return $response->send();
 
 
