@@ -65,6 +65,8 @@ class Location implements \JsonSerializable
 			'id'=>$this->id,
 			'name'=>$this->name,
 			'locality'=>$this->locality,
+			'latitude'=>$this->latitude,
+			'longitude'=>$this->longitude,
 		];
 	}
 
