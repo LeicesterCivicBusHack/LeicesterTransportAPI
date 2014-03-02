@@ -1,6 +1,6 @@
 <?php
 
-	namespace LeicesterCivicBusHack\MistabusAPIBundle\Entity;
+	namespace LeicesterCivicBusHack\MistabusAPIBundle\Command;
 
 	use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 	use Symfony\Component\Console\Input\InputInterface;
